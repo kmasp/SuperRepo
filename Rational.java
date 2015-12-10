@@ -143,21 +143,35 @@ public class Rational implements Comparable
     // Compare To Method
     public int compareTo(Object other)
     {
-        int n1, n2 = 0;
-        
-        this.reduce();
-        if (other instanceof Rational)
+	int nOther = 0;
+	int dOther = 1;
+	int retI;
+	
+	if (other instanceof Comparable)
 	{
-            ((Rational) other).reduce();
+	    Comparable t;
+	    t = (Comparable)other;
+	    nOther = t._n;
+	    dOther = t._d;
 	}
-        else
+	else
 	{
-            throw new ClassCastException("Invalid Object class parameter. Requires an instance of the 'Rational' class.");
+	    throw new ClassCastException("Input not valid.");
 	}
-        n1 = _n * ((Rational) other).getD();
-        n2 = ((Rational) other).getN() * _d;
-        
-        return (n1 - n2);
+
+	if (_n * dOther > nOther * _d)
+	{
+	    retI = 1;
+	}
+	else if (_n * dOther < nOther * _d)
+	{
+	    retI = -1;
+	}
+	else
+	{
+	    retI = 0;
+	}
+	return retI;
     }
     
     // Equals Method
