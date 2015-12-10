@@ -1,7 +1,7 @@
 //Kyle Moon
 //APCS1 pd5
-//hw41 -- In America the Driver sits on the left.
-//2015-12-03
+//Comparable
+//2015-12-09
 
 public interface Comparable
 {

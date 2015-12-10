@@ -1,9 +1,9 @@
 //Kyle Moon
 //APCS1 pd5
-//HW44 -- This or That or Fourteen Other Things
+//Hexadecimal
 //2015-12-08
 
-public class Hexadecimal
+public class Hexadecimal implements Comparable
 {
 
     private int _decNum;

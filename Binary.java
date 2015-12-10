@@ -1,11 +1,10 @@
-/*
-Kyle Moon
-APCS1 pd5
-HW43
-2015-12-07
-*/
+//Kyle Moon
+//APCS1 pd5
+//Binary
+//2015-12-09
 
-public class Binary {
+public class Binary implements Comparable
+{
 
     private int _decNum;
     private String _binNum;
